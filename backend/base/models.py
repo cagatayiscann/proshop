@@ -31,7 +31,7 @@ class Review(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)
     rating = models.IntegerField(null=True, blank=True, default=0)
     comment = models.TextField(null=True, blank=True)
-    createdAt = models.DateTimeField(auto_now_add=True, null=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
     _id = models.AutoField(primary_key=True, editable=False)
 
     def __str__(self):
@@ -52,7 +52,7 @@ class Order(models.Model):
     isDelivered = models.BooleanField(default=False)
     deliveredAt = models.DateTimeField(
         auto_now_add=False, null=True, blank=True)
-    createdAt = models.DateTimeField(auto_now_add=True, null=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
     _id = models.AutoField(primary_key=True, editable=False)
 
     def __str__(self):
@@ -73,7 +73,7 @@ class OrderItem(models.Model):
         return str(self.name)
 
 
-class ShippingAdress(models.Model):
+class ShippingAddress(models.Model):
     order = models.OneToOneField(
         Order, on_delete=models.CASCADE, null=True, blank=True)
     address = models.CharField(max_length=200, null=True, blank=True)
