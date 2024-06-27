@@ -21,11 +21,11 @@ A comprehensive e-commerce react, redux, django web app.
 ## Download & Setup Instructions
 
 
-- **git clone https://github.com/cagatayiscann/proshop
-- **cd proshop_django
-- **pip install -r requirements.txt
-- **python manage.py runserver
+- git clone https://github.com/cagatayiscann/proshop
+- cd proshop_django
+- pip install -r requirements.txt
+- python manage.py runserve
 
-## install React modules
-- **cd frontend
-- **npm install
+## React modules
+- cd frontend
+- npm install
