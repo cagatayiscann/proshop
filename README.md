@@ -1,4 +1,5 @@
 A comprehensive e-commerce react, redux, django web app.
+
 ![proshop](https://github.com/cagatayiscann/proshop/assets/64129421/7643f930-83d0-48d1-be74-d6989bbfba36)
 
 
@@ -16,3 +17,15 @@ A comprehensive e-commerce react, redux, django web app.
 - **Mark Orders as Delivered Option**
 - **Checkout Process (Shipping, Payment Method, etc.)**
 - **PayPal / Credit Card Integration**
+
+## Download & Setup Instructions
+
+
+- **git clone https://github.com/cagatayiscann/proshop
+- **cd proshop_django
+- **pip install -r requirements.txt
+- **python manage.py runserver
+
+## install React modules
+- **cd frontend
+- **npm install
