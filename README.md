@@ -1,4 +1,4 @@
-A comprehensive e-commerce react, redux, django web app.
+An e-commerce react, redux, django web app project.
 
 ![proshop](https://github.com/cagatayiscann/proshop/assets/64129421/7643f930-83d0-48d1-be74-d6989bbfba36)
 
