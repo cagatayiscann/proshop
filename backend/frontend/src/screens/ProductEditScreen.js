@@ -10,7 +10,7 @@ import { listProductDetails, updateProduct } from '../actions/productActions';
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
 
 function ProductEditScreen() {
-  const params = useParams();
+  const { id: productId } = useParams();
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -23,8 +23,6 @@ function ProductEditScreen() {
   const [uploading, setUploading] = useState(false);
 
   const dispatch = useDispatch();
-
-  const productId = params.id;
 
   const productDetails = useSelector((state) => state.productDetails);
   const { error, loading, product } = productDetails;
@@ -144,12 +142,13 @@ function ProductEditScreen() {
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
 
-              <Form.File
+              <Form.Control
+                type="file"
                 id="image-file"
                 label="Choose File"
                 custom
                 onChange={uploadFileHandler}
-              ></Form.File>
+              ></Form.Control>
               {uploading && <Loader />}
             </Form.Group>
 

@@ -7,15 +7,16 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import { listProducts } from '../actions/productActions';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function HomeScreen() {
   const dispatch = useDispatch();
+  const location = useLocation();
+
   const productList = useSelector((state) => state.productList);
   const { error, loading, products, page, pages } = productList;
 
-  const [searchParams] = useSearchParams();
-  const keyword = searchParams.toString();
+  let keyword = location.search;
 
   useEffect(() => {
     dispatch(listProducts(keyword));

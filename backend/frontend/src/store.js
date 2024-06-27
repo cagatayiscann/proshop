@@ -23,8 +23,10 @@ import {
   orderDeliverReducer,
   orderDetailsReducer,
   orderListMyReducer,
+  orderListReducer,
   orderPayReducer,
 } from './reducers/orderReducers';
+import OrderListScreen from './screens/OrderListScreen';
 
 const reducer = combineReducers({
   productList: productListReducer,
@@ -33,6 +35,7 @@ const reducer = combineReducers({
   productDelete: productDeleteReducer,
   productCreate: productCreateReducer,
   productUpdate: productUpdateReducer,
+  productReviewCreate: productCreateReducer,
 
   cart: cartReducer,
   userLogin: userLoginReducer,
@@ -48,6 +51,7 @@ const reducer = combineReducers({
   orderPay: orderPayReducer,
   orderDeliver: orderDeliverReducer,
   orderListMy: orderListMyReducer,
+  orderList: orderListReducer,
 });
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')
